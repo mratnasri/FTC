@@ -6,9 +6,7 @@
 </head>
 <body>
 
-<h1>
-	Welcome ${sessionScope.firstName}
-</h1>
+<h1>Coming Soon... </h1>
 
 
 </body>

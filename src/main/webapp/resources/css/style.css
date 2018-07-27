@@ -29,11 +29,11 @@
     }
     
     /* Set black background color, white text and some padding */
-    .footer {
+    /* .footer {
       background-color: #ad7fa8;
       color: white;
       font-style: italic;	
-    }
+    } */
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -44,6 +44,17 @@
       .row.content {height:auto;} 
     }
     
-  
+  .bg-4 { 
+    background-color: #2f2f2f;
+    color: #ffffff;
+}
+.bg-2 { 
+      background-color: #474e5d;
+      color: #ffffff;
+  }
+.footer {
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
   </style>
   

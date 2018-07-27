@@ -9,12 +9,12 @@
 </head>
 <body>
 
-		<h6 align = "center" style="color: green;">${successMsg}</h6>
+		<h5 align = "center" style="color: green;">${successMsg}</h5>
 	
 	<h1 align="center">Login</h1>
 
 	<br>
-<h6 align = "center" style="color: red;">${errorMsg}</h6>
+<h5 align = "center" style="color: red;">${errorMsg}</h5>
 	<form Class="form-horizontal" action="dologin" method="post" autocomplete="off">
 		<fieldset>
 	<div class="form-group">
@@ -43,7 +43,7 @@
 			<button type="Submit" class="btn btn-default">Login</button>
 			</div>
 			<div class="col-sm-offset-4 col-sm-8">
-			<a href="#recoverPassword" >Forgot Password</a>
+			<a href="recoverPassword" >Forgot Password</a>
 			</div>
 			</div>
 			<br>

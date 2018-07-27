@@ -16,7 +16,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 
 		if(session.getAttribute("username")!=null && session.getAttribute("isLoggedIn")!=null ){
 			//user has already logged in . so therefore can access any resource
-			System.out.println("Logged In");
+			/*System.out.println("Logged In");*/
 			if (request.getRequestURI().endsWith("/login")){
 				response.sendRedirect(request.getContextPath()+"/profile");
 				return false;
@@ -34,6 +34,18 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 			return true;
 		}
 		if (request.getRequestURI().endsWith("/home")){
+
+			return true;
+		}
+		if (request.getRequestURI().endsWith("/courses")){
+
+			return true;
+		}
+		if (request.getRequestURI().endsWith("/course")){
+
+			return true;
+		}
+		if (request.getRequestURI().contains("/resources")){
 
 			return true;
 		}
@@ -58,7 +70,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 		else{
 			//user is not logged in and is trying to access a resource. so redirect him to login page
 			response.sendRedirect(request.getContextPath()+"/login");
-			System.out.println("Not logged in");
+			//System.out.println("Not logged in");
 			return false;
 		}
 	}

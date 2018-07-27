@@ -8,9 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div class="container-fluid">
-<div class="footer" align="center"><p>copyright@CDAC-Mumbai</p></div>
-</div>
+<footer class="footer container-fluid bg-2 text-center">
+<!-- <div class="footer" align="center"> --><p>copyright@CDAC-Mumbai</p><!-- </div> -->
+</footer>
 <br>
 </body>
 </html>

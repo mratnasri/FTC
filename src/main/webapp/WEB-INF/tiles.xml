@@ -42,10 +42,37 @@
         <put-attribute name="body" value="/WEB-INF/views/jsp/profile.jsp" />  
     </definition>
     <definition name="editProfile" extends="base.definition">  
-        <put-attribute name="title" value="Profile" />  
+        <put-attribute name="title" value="Edit Profile" />  
         <put-attribute name="body" value="/WEB-INF/views/jsp/editProfile.jsp" />  
     </definition>
-  
+    <definition name="createSubject" extends="base.definition">  
+        <put-attribute name="title" value="Create Subject" />  
+        <put-attribute name="body" value="/WEB-INF/views/jsp/createSubject.jsp" />  
+    </definition>
+    <definition name="createCategory" extends="base.definition">  
+        <put-attribute name="title" value="Create Category" />  
+        <put-attribute name="body" value="/WEB-INF/views/jsp/createCategory.jsp" />  
+    </definition>
+    <definition name="createCourse" extends="base.definition">  
+        <put-attribute name="title" value="Create Course" />  
+        <put-attribute name="body" value="/WEB-INF/views/jsp/createCourse.jsp" />  
+    </definition>
+    <definition name="createQualification" extends="base.definition">  
+        <put-attribute name="title" value="Create Qualification" />  
+        <put-attribute name="body" value="/WEB-INF/views/jsp/createQualification.jsp" />  
+    </definition>
+    <definition name="courses" extends="base.definition">  
+        <put-attribute name="title" value="Courses" />  
+        <put-attribute name="body" value="/WEB-INF/views/jsp/courses.jsp" />  
+    </definition>
+    <definition name="course" extends="base.definition">  
+        <put-attribute name="title" value="Course" />  
+        <put-attribute name="body" value="/WEB-INF/views/jsp/course.jsp" />  
+    </definition>
+    <definition name="enroll" extends="base.definition">  
+        <put-attribute name="title" value="Enrollment" />  
+        <put-attribute name="body" value="/WEB-INF/views/jsp/enroll.jsp" />  
+    </definition>
   
   
   	<!-- Attendee Layout 

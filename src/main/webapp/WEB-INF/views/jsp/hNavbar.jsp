@@ -24,10 +24,10 @@
 
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="home">Home</a></li>
+				<li><a href="home">Home</a></li>
 				
-				<li><a href="#">Courses</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="courses">Courses</a></li>
+				<li><a href="contact">Contact</a></li>
 			</ul>
 
 			<form class="navbar-form navbar-right" action="/action_page.php">

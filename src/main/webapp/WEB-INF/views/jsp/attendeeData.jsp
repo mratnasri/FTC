@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="registration" >Register user</a> |   
-<!-- <a href="contact.html">Contact</a>   -->
+<h1>Coming Soon... </h1>
 </body>
 </html>

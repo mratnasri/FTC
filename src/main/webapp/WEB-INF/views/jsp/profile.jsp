@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<c:if test="${sessionScope.isLoggedIn}">
+
 <div class="table-responsive">
 <p align="center"><b>Profile</b> 
 
@@ -53,6 +53,6 @@
 
     </table>
     </div>
-    </c:if>
+
 </body>
 </html>

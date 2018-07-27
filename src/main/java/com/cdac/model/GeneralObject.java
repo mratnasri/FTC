@@ -1,6 +1,8 @@
 package com.cdac.model;
 
-public class Qualification {
+import java.util.Random;
+
+public class GeneralObject {
 	int id;
 	String name;
 	String description;
@@ -21,5 +23,13 @@ public class Qualification {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public int randomNumber(int min, int max)
+	{
+		 Random rn = new Random();
+		  int range = max - min + 1;
+		  int randomNum =  min + rn.nextInt(range) ;
+		  return(randomNum);
 	}
 }

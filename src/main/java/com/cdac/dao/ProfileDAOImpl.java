@@ -13,8 +13,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.cdac.model.GeneralObject;
 import com.cdac.model.Profile;
-import com.cdac.model.Qualification;
+
 @Repository
 public class ProfileDAOImpl implements ProfileDAO {
 	@Autowired
@@ -32,10 +33,10 @@ public class ProfileDAOImpl implements ProfileDAO {
 			}
 			else
 			{
-			    query="UPDATE profile set username = ?, gender=?,address=?,hobbies=?, skills=?, specialization=?, qualification=?, organization=?, designation=?";
+			    query="UPDATE profile set gender=?,address=?,hobbies=?, skills=?, specialization=?, qualification=?, organization=?, designation=? where username = ?";
 			}
 			
-			jdbctemplate.update(query, new Object[]{profile.getUsername(),profile.getGender(),profile.getAddress(),profile.getHobbies(),profile.getSkills(),profile.getSpecialization(),(profile.getQualId()<=0)?null:profile.getQualId(),profile.getOrganization(),profile.getDesignation()});
+			jdbctemplate.update(query, new Object[]{profile.getGender(),profile.getAddress(),profile.getHobbies(),profile.getSkills(),profile.getSpecialization(),(profile.getQualId()<=0)?null:profile.getQualId(),profile.getOrganization(),profile.getDesignation(),profile.getUsername()});
 			HttpSession session= req.getSession();
 			session.setAttribute("profile", profile);
 			return true;
@@ -49,11 +50,11 @@ public class ProfileDAOImpl implements ProfileDAO {
 	@Override
 	public boolean getQualification(HttpServletRequest req,HttpServletResponse res) {
 		try{
-		List<Qualification> quals = this.jdbctemplate.query(
+		List<GeneralObject> quals = this.jdbctemplate.query(
 		        "select * from qualification",
-		        new RowMapper<Qualification>() {
-		            public Qualification mapRow(ResultSet rs, int rowNum) throws SQLException {
-		            	Qualification quals = new Qualification();
+		        new RowMapper<GeneralObject>() {
+		            public GeneralObject mapRow(ResultSet rs, int rowNum) throws SQLException {
+		            	GeneralObject quals = new GeneralObject();
 		            	quals.setId(rs.getInt("id"));
 		            	quals.setName(rs.getString("name"));
 		            	quals.setDescription("description");
@@ -62,7 +63,6 @@ public class ProfileDAOImpl implements ProfileDAO {
 		        });
 		
 	
-		
 		HttpSession session= req.getSession();
 		session.setAttribute("quals", quals);
 		

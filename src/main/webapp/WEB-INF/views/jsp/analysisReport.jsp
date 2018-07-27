@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hi ${user.name}, your registration is successful. PLease <a href="login" >login</a> to continue.
+<h1>Coming Soon... </h1>
 </body>
 </html>

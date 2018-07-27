@@ -31,9 +31,5 @@
 	</servlet-mapping>
 
 
-	 <listener>
-   <listener-class>
- 	com.cdac.init.Initializer
- 	</listener-class>
- </listener>
+	
 </web-app>

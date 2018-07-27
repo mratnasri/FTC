@@ -5,8 +5,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page session="true"%>
-<%@page import="com.cdac.model.Profile"%>
-<%@page import="com.cdac.model.Qualification"%>
+
+
 
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-	<c:if test="${sessionScope.isLoggedIn}">
+	
 		<div class="table-responsive">
 		<div class="well">
 			<p align="center">
@@ -25,14 +25,14 @@
 
 			</p>
 			
-			<h6 align="center" style="color: red;">${errorMsg}</h6>
+			<h5 align="center" style="color: red;">${errorMsg}</h5>
 			<form Class="form-horizontal" action="saveProfile" method="post" >
 				
 
 					<div class="form-group">
 						<label class="control-label col-sm-4" for="username">Username:</label>
 						<div class="col-sm-4">
-						 <input  class="form-control" name="username" type="text" value="${username}" required /> 
+						 <input  class="form-control" name="username" type="text" value="${username}" required readonly /> 
 						 </div>
 					</div>
 					<div class="form-group">
@@ -105,6 +105,6 @@
 			</form>
 			</div>
 		</div>
-	</c:if>
+	
 </body>
 </html>
